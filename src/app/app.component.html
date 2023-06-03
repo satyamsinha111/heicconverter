@@ -1,0 +1,12 @@
+<div class="container p-4 main-container">
+  <div class="col-12 border p-4 d-flex justify-content-center imagebox">
+    <div class="border p-4 w-50 d-flex justify-content-center">
+          <strong class="text-secondary" *ngIf="!imageUrl" >HEIC IMAGE PREVIEW</strong>
+          <img *ngIf="imageUrl" class="w-100" [src]="imageUrl" alt="Image preview" srcset="">
+    </div>
+  </div>
+  <div class="col-12 border p-4 d-flex justify-content-center actionbox">
+    <button type="button" class="btn btn-dark"  (click)="hiddenfileinput.click()">Upload HEIC file</button>
+    <input  (change)="onUploadHeicFile($event)" style="display: none" class="ng-hide" id="input-file-id" type="file" #hiddenfileinput />
+  </div>
+</div>
